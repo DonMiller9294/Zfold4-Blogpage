@@ -1,0 +1,164 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.blog-content {
+  width: 60%;
+  float: left;
+  margin-right: 20px;
+  font-family: 'BlinkMacSystemFont';
+  text-align: initial;
+  line-height: 1.5;
+  background-color: lightgray;
+  font-size: 30px;
+  
+  /* Add a border with increased thickness */
+  border: 2px solid black; /* You can adjust the thickness and color as needed */
+}
+
+
+
+/* Clear the float to prevent issues with following elements */
+.blog-content {
+  content: "";
+  display:table;
+  clear: both;
+  margin-top: 30px; /* Adjust the margin-top value to lower or raise the paragraph */
+  opacity: 0; /* Start with zero opacity to make it invisible */
+  transition: opacity 2.0s ease-in-out; /* Add a transition effect on opacity property */
+  }
+
+
+.blog-content.appear {
+  opacity: 1; /* Set opacity to 1 to make it fully visible */
+}
+
+.blog-image {
+  max-width: 100%; /* Adjust image width as needed */
+  height: auto;    /* Maintain the image's aspect ratio */
+}
+
+/* Add a class for the image rotation effect */
+.rotate-on-hover {
+  transition: transform 0.3s ease-in-out;
+}
+
+/*.rotate-on-hover:hover {
+  transform: rotate(5deg);
+}*/ /* This code allows the first image to rotate 5 degrees when hovering over the photo. I have this turned off remove comment slashes to reactivate.*/
+
+body {
+  background-color:darkslateblue;
+}
+
+.typewriter {
+  overflow: hidden; /* Hide overflowing characters */
+  border-right: 0.15em solid white; /* Add a cursor effect */
+  white-space: nowrap; /* Prevent text from wrapping */
+  animation: typing 3s steps(40, end) infinite, blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0; /* Start with no text */
+  }
+  to {
+    width: 100%; /* Gradually reveal the entire text */
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent; /* Make the cursor blink */
+  }
+  50% {
+    border-color: white; /* Show the cursor */
+  }
+}
+
+/* The bottom Css is credited to the http site linked below*/
+
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200');
+
+body  {
+    background-image: url('https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg');
+  background-size:cover;
+        -webkit-animation: slidein 100s;
+        animation: slidein 100s;
+
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+
+        -webkit-animation-direction: alternate;
+        animation-direction: alternate;              
+}
+
+@-webkit-keyframes slidein {
+from {background-position: top; background-size:3000px; }
+to {background-position: -100px 0px;background-size:2750px;}
+}
+
+@keyframes slidein {
+from {background-position: top;background-size:3000px; }
+to {background-position: -100px 0px;background-size:2750px;}
+
+}
+.center
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(75, 75, 250, 0.3);
+  border-radius: 3px;
+}
+.center h1{
+  text-align:center;
+  color:white;
+  font-family: 'Source Code Pro', monospace;
+  text-transform:uppercase;
+}
+.second-typewriter {
+  overflow: hidden; /* Hide overflowing characters */
+  border-right: 0.15em solid white; /* Add a cursor effect */
+  white-space: nowrap; /* Prevent text from wrapping */
+  animation: typing 3s steps(40, end) infinite, blink-caret 0.75s step-end infinite;
+}
+
+
